@@ -18,7 +18,7 @@ public class Programa {
 		while(true) {
 			try {
 				IU.limparTela();
-				IU.printTabuleiro(partida.getPecas());
+				IU.printPartida(partida);
 				System.out.println();
 				System.out.print("Posição inicial: ");
 				PosicaoDoXadrez inicial = IU.lePosicaoXadrez(sc);
