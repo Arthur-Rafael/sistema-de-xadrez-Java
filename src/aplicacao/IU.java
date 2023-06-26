@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import xadrez.Cor;
@@ -59,6 +58,9 @@ public class IU {
 		System.out.println();
 		System.out.println("Turno : " + partidaDeXadrez.getTurno());
 		System.out.println("Esperando jogador: " + partidaDeXadrez.getjogadorAtual());
+		if (partidaDeXadrez.getXeque()) {
+			System.out.println("XEQUE!");
+		}
 	}
 		
 	public static void printTabuleiro(PecaDeXadrez[][] pecas) {
