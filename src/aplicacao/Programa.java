@@ -23,6 +23,9 @@ public class Programa {
 				System.out.print("Posição inicial: ");
 				PosicaoDoXadrez inicial = IU.lePosicaoXadrez(sc);
 				
+				boolean[][] movimentosPossiveis = partida.movimentosPossiveis(inicial);
+				IU.limparTela();
+				IU.printTabuleiro(partida.getPecas(), movimentosPossiveis);
 				System.out.println();
 				System.out.print("Destino: ");
 				PosicaoDoXadrez destino = IU.lePosicaoXadrez(sc);
