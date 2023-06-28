@@ -1,5 +1,6 @@
 package aplicacao;
 
+import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -41,7 +42,11 @@ public class Programa {
 					
 					if(partida.getPromovida() != null) {
 						System.out.println("Entre com a peça que será promovida(T/C/B/Q): ");
-						String tipo = sc.nextLine();
+						String tipo = sc.nextLine().toUpperCase();
+						while (!tipo.equals("T") && !tipo.equals("C") && !tipo.equals("B") && !tipo.equals("Q")) {
+							System.out.println("Valor invalido! Entre com a peça que será promovida(T/C/B/Q): ");
+							tipo = sc.nextLine().toUpperCase();
+						}
 						partida.substituiPecaPromovida(tipo);
 					}
 				}
